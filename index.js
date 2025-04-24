@@ -19,7 +19,6 @@ const auth_routes = require('./routes/auth_users.js');
 const general_routes = require('./routes/general.js');
 const book_routes = require('./routes/books.js');
 const borrow_routes = require('./routes/borrow.js');
-const user_routes = require('./routes/users.js');
 const library_routes = require('./routes/libraries.js');
 const inventory_routes = require('./routes/inventory.js');
 
@@ -42,8 +41,7 @@ app.use("/", general_routes);
 app.use("/api/books", book_routes);
 app.use("/api/borrow", borrow_routes);
 app.use("/api/libraries", library_routes);
-app.use("/api/libraries/:libraryId/inventory", inventory_routes); // Fixed route mounting
-app.use("/api/users", user_routes);
+app.use("/api/libraries/:libraryId/inventory", inventory_routes); // Fixed 
 
 // Error handling
 app.use((err, req, res, next) => {

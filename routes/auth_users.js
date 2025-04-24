@@ -1,11 +1,10 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const dotenv = require('dotenv'); // To load the secret key from environment
+const dotenv = require('dotenv'); 
 dotenv.config();
 
-const users = []; // Same in-memory store for simplicity
-
+const users = []; 
 // POST /register
 router.post('/register', (req, res) => {
   const { username, password, role } = req.body;
